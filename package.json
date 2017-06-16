@@ -1,0 +1,14 @@
+{
+  "name": "koc-common-image",
+  "version": "1.0.1",
+  "description": "koc-common-image",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cq-guojia/koc-common-image.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
