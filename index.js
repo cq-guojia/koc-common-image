@@ -1,3 +1,5 @@
+"use strict";
+
 const KOCReturn = require("koc-common-return");
 const ImageMagick = require("gm").subClass({imageMagick: true});
 
