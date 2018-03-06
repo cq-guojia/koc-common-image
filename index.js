@@ -156,15 +156,56 @@ const KOCImage = {
             }
             break;
         }
-        Image.write(target, (err) => {
-          if (err) {
-            retValue.hasError = true;
-            retValue.message = err.message;
-            return resolve(retValue);
-          }
-          retValue.returnObject = Ratio;
-          resolve(retValue);
-        });
+        if (typeof target !== 'string') {
+          target = 'JPG'
+        }
+        if (target === 'JPG' || target === 'PNG') {
+          Image.toBuffer(target, (err) => {
+            if (err) {
+              retValue.hasError = true;
+              retValue.message = err.message;
+              return resolve(retValue);
+            }
+            retValue.returnObject = Ratio;
+          });
+        } else {
+          // ...
+          Image.write(target, (err) => {
+            if (err) {
+              retValue.hasError = true;
+              retValue.message = err.message;
+              return resolve(retValue);
+            }
+            retValue.returnObject = Ratio;
+          });
+        }
+        // switch (target){
+        //
+        //   case null:
+        //   case '':
+        //   case 'JPG':
+        //     break;
+        // }
+        if (typeof target === 'string') {
+          Image.write(target, (err) => {
+            if (err) {
+              retValue.hasError = true;
+              retValue.message = err.message;
+              return resolve(retValue);
+            }
+            retValue.returnObject = Ratio;
+          });
+        } else {
+          Image.toBuffer(target, (err) => {
+            if (err) {
+              retValue.hasError = true;
+              retValue.message = err.message;
+              return resolve(retValue);
+            }
+            retValue.returnObject = Ratio;
+          });
+        }
+        resolve(retValue);
       });
     });
   }
