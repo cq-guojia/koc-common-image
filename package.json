@@ -1,6 +1,6 @@
 {
   "name": "koc-common-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "koc-common-image",
   "main": "index.js",
   "dependencies": {
