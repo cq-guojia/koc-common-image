@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gm": "^1.23.0",
-    "koc-common-return": "^1.0.9"
+    "koc-common-return": "^1.0.19"
   },
   "repository": {
     "type": "git",
