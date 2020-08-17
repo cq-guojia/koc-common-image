@@ -1,6 +1,6 @@
 'use strict'
 
-const KOCReturn = require('koc-common-return')
+const KOCReturn = require('koc-common-return/index')
 const ImageMagick = require('gm').subClass({imageMagick: true})
 
 const KOCImage = {
