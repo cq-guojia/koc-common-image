@@ -1,11 +1,11 @@
 {
   "name": "koc-common-image",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "koc-common-image",
   "main": "index.js",
   "dependencies": {
     "gm": "^1.23.0",
-    "koc-common-return": "^2.0.8"
+    "koc-common-return": "^2.0.9"
   },
   "repository": {
     "type": "git",
